@@ -1,0 +1,23 @@
+:root {
+
+  /* COLORS */
+  --bg-primary: #05070d;
+  --bg-secondary: #0b1220;
+  --panel-bg: rgba(10,15,30,0.6);
+
+  --accent-glow: #38bdf8;
+  --accent-soft: #1e293b;
+
+  --text-primary: #e2e8f0;
+  --text-muted: #94a3b8;
+
+  /* EFFECTS */
+  --glow-shadow: 0 0 20px rgba(56,189,248,0.5);
+
+  /* BORDER */
+  --panel-border: 1px solid rgba(56,189,248,0.3);
+
+  /* SPACING */
+  --section-padding: 120px;
+
+}
