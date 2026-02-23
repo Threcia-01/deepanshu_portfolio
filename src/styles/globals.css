@@ -1,12 +1,6 @@
 @import "./variables.css";
 @import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
@@ -14,9 +8,35 @@ body {
   overflow-x: hidden;
 }
 
+/* === FONT UTILITIES === */
+
+.font-cinzel {
+  font-family: "Cinzel", serif;
+}
+
+.font-rokkitt {
+  font-family: "Rokkitt", serif;
+}
+
+.gradient-glow-text {
+  background: linear-gradient(90deg, #E6FBFF 0%, #B8F0FF 50%, #3BA6D8 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+
+  /* Depth + soft bloom */
+  text-shadow:
+    0 2px 6px rgba(20,70,120,0.25),   /* inner depth */
+    0 0 8px rgba(120,200,255,0.65),   /* soft glow */
+    0 0 18px rgba(120,200,255,0.55),  /* bloom */
+    0 0 40px rgba(120,200,255,0.18);  /* outer haze */
+}
+/* === SECTION SPACING === */
+
 .section {
   padding: var(--section-padding) 0;
 }
+
+/* === ANIMATIONS === */
 
 .fade-in {
   animation: fadeIn 1s ease forwards;
@@ -51,13 +71,7 @@ body {
 }
 
 @keyframes flashFade {
-  0% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
-  }
+  0% { opacity: 1; }
+  40% { opacity: 0.9; }
+  100% { opacity: 0; }
 }

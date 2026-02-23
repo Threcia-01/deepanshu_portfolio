@@ -1,11 +1,12 @@
-import SectionWrapper from "../../layout/SectionWrapper"
+import HeroBackground from "./HeroBackground"
+import HeroContent from "./HeroContent"
 
 export default function HeroSection() {
   return (
-    <SectionWrapper>
-      <div className="h-[600px] flex items-center justify-center">
-        <h1 className="text-5xl font-bold">Hero Section</h1>
-      </div>
-    </SectionWrapper>
+    <section className="relative w-full min-h-[90vh] overflow-hidden">
+      <HeroBackground />
+      <HeroContent />
+
+    </section>
   )
 }

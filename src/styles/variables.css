@@ -1,8 +1,7 @@
 :root {
 
   /* COLORS */
-  --bg-primary: #05070d;
-  --bg-secondary: #0b1220;
+  --bg-primary: #0a0a0a;
   --panel-bg: rgba(10,15,30,0.6);
 
   --accent-glow: #38bdf8;

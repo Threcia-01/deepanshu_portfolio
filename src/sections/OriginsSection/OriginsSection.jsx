@@ -1,11 +1,32 @@
 import SectionWrapper from "../../layout/SectionWrapper"
 
-export default function Origins() {
+import TopLeftCorner from "../../components/containerCorners/topLeftCorner"
+import TopRightCorner from "../../components/containerCorners/topRightCorner"
+import BottomLeftCorner from "../../components/containerCorners/bottomLeftCorner"
+import BottomRightCorner from "../../components/containerCorners/bottomRightCorner"
+
+import OriginsTitle from "./OriginsTitle"
+import OriginsContent from "./originsContent"
+
+export default function OriginsSection() {
   return (
     <SectionWrapper>
-      <div className="h-[600px] flex items-center justify-center">
-        <h2 className="text-4xl">Origins</h2>
+
+      <div className="relative max-w-6xl mx-auto py-32">
+
+        {/* Top corners */}
+        <TopLeftCorner />
+        <TopRightCorner />
+
+        <OriginsTitle />
+        <OriginsContent />
+
+        {/* Bottom corners */}
+        <BottomLeftCorner />
+        <BottomRightCorner />
+
       </div>
+
     </SectionWrapper>
   )
 }

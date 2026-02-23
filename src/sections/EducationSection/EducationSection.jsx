@@ -1,6 +1,6 @@
 import SectionWrapper from "../../layout/SectionWrapper"
 
-export default function Education() {
+export default function EducationSection() {
   return (
     <SectionWrapper>
       <div className="h-[600px] flex items-center justify-center">

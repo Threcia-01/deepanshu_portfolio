@@ -1,6 +1,6 @@
 import SectionWrapper from "../../layout/SectionWrapper"
 
-export default function Contact() {
+export default function ContactSection() {
   return (
     <SectionWrapper>
       <div className="h-[600px] flex items-center justify-center">

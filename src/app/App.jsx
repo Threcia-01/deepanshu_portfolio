@@ -4,20 +4,24 @@ import { useIntroPage } from "../introPage/useIntroPage"
 import StartScreen from "../introPage/StartScreen"
 import TransitionScreen from "../introPage/TransitionScreen"
 import PortfolioPage from "../layout/PortfolioPage"
+import Navbar from "../components/navigation/Navbar"
 
 function AppContent() {
   const { stage } = useIntroPage()
 
+  if (stage === "intro") return <StartScreen />
+
+  if (stage === "transition") return <TransitionScreen />
+
+  // portfolio stage
   return (
-    <div>
-      {stage === "intro" && <StartScreen />}
-      {stage === "transition" && <TransitionScreen />}
-      {stage === "portfolio" && (
-        <MainLayout>
-          <div className="text-center mt-40">Portfolio Coming Soon</div>
-        </MainLayout>
-      )}
-    </div>
+    <>
+      <Navbar />
+
+      <MainLayout className="pt-16">
+        <PortfolioPage />
+      </MainLayout>
+    </>
   )
 }
 
