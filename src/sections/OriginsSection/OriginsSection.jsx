@@ -12,7 +12,7 @@ export default function OriginsSection() {
   return (
     <SectionWrapper>
 
-      <div className="relative max-w-6xl mx-auto py-32">
+      <div className="relative max-w-6xl mx-auto py-32 ">
 
         {/* Top corners */}
         <TopLeftCorner />

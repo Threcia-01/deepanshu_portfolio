@@ -1,9 +1,9 @@
 export default function TopRightCorner() {
   return (
-    <div className="absolute top-0 right-0 z-[30] pointer-events-none">
+    <div className="absolute top-0 right-0 z-30 pointer-events-none">
       <svg
         viewBox="0 0 313 202"
-        className="w-[250px] sm:w-[300px] md:w-[350px] h-auto drop-shadow-[0_0_10px_rgba(99,171,198,0.6)]"
+        className="w-62.5 sm:w-75 md:w-87.5 h-auto drop-shadow-[0_0_10px_rgba(99,171,198,0.6)]"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

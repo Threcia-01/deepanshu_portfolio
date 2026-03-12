@@ -1,11 +1,32 @@
 import SectionWrapper from "../../layout/SectionWrapper"
 
-export default function SkillsS() {
+import TopLeftCorner from "../../components/containerCorners/topLeftCorner"
+import TopRightCorner from "../../components/containerCorners/topRightCorner"
+import BottomLeftCorner from "../../components/containerCorners/bottomLeftCorner"
+import BottomRightCorner from "../../components/containerCorners/bottomRightCorner"
+
+import InventoryTitle from "./inventoryTitle"
+import InventoryGrid from "./inventoryGrid"
+
+export default function SkillsSection() {
   return (
-    <SectionWrapper>
-      <div className="h-[600px] flex items-center justify-center">
-        <h2 className="text-4xl">Skills</h2>
+    <SectionWrapper >
+      <div className="relative max-w-6xl mx-auto py-22 -top-40">
+
+        {/* Top Corners */}
+        <TopLeftCorner />
+        <TopRightCorner />
+
+        <InventoryTitle />
+
+        <InventoryGrid />
+
+        {/* Bottom Corners */}
+        <BottomLeftCorner />
+        <BottomRightCorner />
+
       </div>
+
     </SectionWrapper>
   )
 }

@@ -1,6 +1,10 @@
 @import "./variables.css";
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
@@ -21,15 +25,16 @@ body {
 .gradient-glow-text {
   background: linear-gradient(90deg, #E6FBFF 0%, #B8F0FF 50%, #3BA6D8 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 
-  /* Depth + soft bloom */
   text-shadow:
-    0 2px 6px rgba(20,70,120,0.25),   /* inner depth */
-    0 0 8px rgba(120,200,255,0.65),   /* soft glow */
-    0 0 18px rgba(120,200,255,0.55),  /* bloom */
-    0 0 40px rgba(120,200,255,0.18);  /* outer haze */
+    0 2px 6px rgba(20,70,120,0.25),
+    0 0 8px rgba(120,200,255,0.65),
+    0 0 18px rgba(120,200,255,0.55),
+    0 0 40px rgba(120,200,255,0.18);
 }
+
 /* === SECTION SPACING === */
 
 .section {
@@ -74,4 +79,175 @@ body {
   0% { opacity: 1; }
   40% { opacity: 0.9; }
   100% { opacity: 0; }
+}
+
+/* === RESUME DIVIDER === */
+.resume-divider {
+  position: relative;
+  margin: 28px 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.resume-divider::before,
+.resume-divider::after {
+  content: '';
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(189,224,237,0.25) 20%,
+    rgba(189,224,237,0.6)  50%,
+    rgba(189,224,237,0.25) 80%,
+    transparent 100%
+  );
+}
+
+.resume-divider-gem {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -55%);
+  color: #BDE0ED;
+  font-size: 30px;
+  line-height: 1;
+  background: var(--bg-transparent);
+  padding: 0 12px;
+  filter: drop-shadow(0 0 8px rgba(189,224,237,0.5));
+}
+
+
+/* === RESUME BOTTOM LAYOUT === */
+
+@keyframes rbFade {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.rb-outer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.rb-outer::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(74,111,165,0.5) 4%,
+    rgba(74,111,165,0.5) 96%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.rb-col-left {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: clamp(20px, 5vw, 94px);
+  position: relative;
+  z-index: 1;
+}
+
+.rb-col-right {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: clamp(20px, 5vw, 94px);
+  position: relative;
+  z-index: 1;
+}
+
+.rb-entry {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  animation: rbFade 0.55s ease both;
+  padding: 18px 0;
+  position: relative;
+}
+
+
+.rb-left-med-connector {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.rb-left-med-connector img {
+  width: clamp(50px, 8vw, 100px);
+  height: clamp(50px, 8vw, 100px);
+  object-fit: cover;
+  filter: drop-shadow(0 0 10px rgba(74,111,165,0.7));
+  transition: filter 0.3s;
+  pointer-events: all;
+  flex-shrink: 0;
+}
+
+.rb-left-med-connector img:hover {
+  filter: drop-shadow(0 0 18px rgba(200,169,110,0.8));
+}
+
+.rb-left-stub-line {
+  width: clamp(16px, 3vw, 44px);
+  height: 1px;
+  flex-shrink: 0;
+  background: linear-gradient(to left, rgba(74,111,165,0.65), transparent);
+}
+
+.rb-right-med-connector {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  transform: translateX(-100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.rb-right-med-connector img {
+  width: clamp(50px, 8vw, 100px);
+  height: clamp(50px, 8vw, 100px);
+  object-fit: cover;
+  filter: drop-shadow(0 0 10px rgba(74,111,165,0.7));
+  transition: filter 0.3s;
+  pointer-events: all;
+  flex-shrink: 0;
+}
+
+.rb-right-med-connector img:hover {
+  filter: drop-shadow(0 0 18px rgba(200,169,110,0.8));
+}
+
+.rb-right-stub-line {
+  width: clamp(16px, 3vw, 44px);
+  height: 1px;
+  flex-shrink: 0;
+  background: linear-gradient(to right, rgba(74,111,165,0.65), transparent);
+}
+
+/* === RESPONSIVE UTILITIES === */
+@media (max-width: 640px) {
+  .section {
+    padding: 60px 0;
+  }
 }

@@ -63,13 +63,13 @@ export default function OriginsContent() {
                 {/* Item */}
                 <div className="grid grid-cols-[28px_1fr_auto] gap-[3%] items-start">
 
-                    <img src={sword} className="w-[30px] h-[50px] mt-[4px] opacity-90" />
+                    <img src={sword} className="w-7.5 h-12.5 mt-1 opacity-90" />
 
                     <div className="min-w-0">
                     <p className="text-[#E6FBFF] font-rokkitt tracking-wide text-[18px]">
                         B.Tech in Artificial Intelligence
                     </p>
-                    <p className="text-[#6FB6FF] font-rokkitt tracking-wide text-[15px] mt-[2px]">
+                    <p className="text-[#6FB6FF] font-rokkitt tracking-wide text-[15px] mt-0.5">
                         Babu Banarsi Das University, Lucknow
                     </p>
                     </div>
@@ -83,13 +83,13 @@ export default function OriginsContent() {
 
                 <div className="grid grid-cols-[28px_1fr_auto] gap-[3%] items-start">
 
-                    <img src={sword} className="w-[30px] h-[50px] mt-[4px] opacity-90" />
+                    <img src={sword} className="w-7.5 h-12.5 mt-1 opacity-90" />
 
                     <div className="min-w-0">
                     <p className="text-[#E6FBFF] font-rokkitt tracking-wide text-[18px]">
                         Senior Secondary (12th CBSE)
                     </p>
-                    <p className="text-[#6FB6FF] font-rokkitt tracking-wide text-[15px] mt-[2px]">
+                    <p className="text-[#6FB6FF] font-rokkitt tracking-wide text-[15px] mt-0.5">
                         Rani Lakshmi Bai Memorial School
                     </p>
                     </div>
@@ -103,13 +103,13 @@ export default function OriginsContent() {
 
                 <div className="grid grid-cols-[28px_1fr_auto] gap-[3%] items-start">
 
-                    <img src={sword} className="w-[30px] h-[50px] mt-[4px] opacity-90" />
+                    <img src={sword} className="w-7.5 h-12.5 mt-1 opacity-90" />
 
                     <div className="min-w-0">
                     <p className="text-[#E6FBFF] font-rokkitt tracking-wide text-[18px]">
                         Secondary (10th CBSE)
                     </p>
-                    <p className="text-[#6FB6FF] font-rokkitt tracking-wide text-[15px] mt-[2px]">
+                    <p className="text-[#6FB6FF] font-rokkitt tracking-wide text-[15px] mt-0.5">
                         Rani Lakshmi Bai Memorial School
                     </p>
                     </div>
