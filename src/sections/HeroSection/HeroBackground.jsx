@@ -1,4 +1,4 @@
-import heroBg from "../../assets/images/heroSectionBg.png"
+import heroBg from "../../assets/images/heroSectionBg.webp"
 import sunJinWoo from "../../assets/images/sunJinWoo.png"
 
 export default function HeroBackground() {
@@ -10,19 +10,17 @@ export default function HeroBackground() {
         style={{ backgroundImage: `url(${heroBg})` }}
       />
 
-      {/* Dark overlay */}
-      {/* <div className="absolute inset-0 bg-black/30" /> */}
-
-      {/* Character image */}
+      {/* Character image — hidden on small screens, shown from md up */}
       <img
         src={sunJinWoo}
         alt="character"
         className="
+          hidden md:block
           absolute
-          right-10
+          right-0 lg:right-10
           bottom-0
-          h-[100vh]
-          w-[40vw]
+          h-[85vh] lg:h-[100vh]
+          w-[45vw] lg:w-[40vw]
           object-contain
           pointer-events-none
           select-none

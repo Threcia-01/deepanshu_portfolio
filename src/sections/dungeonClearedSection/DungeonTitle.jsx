@@ -2,14 +2,15 @@ export default function DungeonTitle() {
   return (
     <h2 className="
       text-center
-      text-[20px]
+      text-[15px] sm:text-[18px] md:text-[20px]
       font-bold
       gradient-glow-text
       font-cinzel
-      tracking-[0.4em]
+      tracking-[0.2em] sm:tracking-[0.4em]
       mb-12
+      px-4
     ">
-        DUNGEON CLEARED
+      DUNGEON CLEARED
     </h2>
   )
 }

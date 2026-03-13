@@ -2,21 +2,11 @@ import shield from "../../assets/images/originsShield.png"
 
 export default function DividerShield() {
   return (
-    <div className="
-      absolute
-      left-1/2
-      top-1/2
-      -translate-x-1/2
-      -translate-y-1/2
-      pointer-events-none
-      z-20
-    ">
-
+    <div className="relative z-20 flex justify-center pointer-events-none -mt-10 -mb-10">
       <img
         src={shield}
-        className="h-40 mt-15 relative z-10"
+        className="h-25 sm:h-29 md:h-33"
       />
-
     </div>
   )
 }

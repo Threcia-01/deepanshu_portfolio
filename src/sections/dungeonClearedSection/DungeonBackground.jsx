@@ -1,4 +1,4 @@
-import DungeonBg from "../../assets/images/dungeonsSectionBg.png"
+import DungeonBg from "../../assets/images/dungeonsSectionBg.webp"
 
 export default function DungeonBackground() {
   return (
