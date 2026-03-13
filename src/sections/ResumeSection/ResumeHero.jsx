@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 import selfImage from "../../assets/images/selfImage.png"
-import { animateFadeUp, animateSlideLeft, animateSlideRight } from "../../components/animations/ScrollAnimations"
+import { animateSlideLeft, animateSlideRight } from "../../components/animations/ScrollAnimations"
 
 export default function ResumeHero() {
   const imgRef = useRef(null)
@@ -24,59 +24,62 @@ export default function ResumeHero() {
         <img
           src={selfImage}
           alt="Deepanshu Chaudhary"
-          className="relative z-8 h-[180px] sm:h-[240px] w-auto object-cover object-top drop-shadow-[0_8px_32px_rgba(0,0,0,0.7)]"
+          className="relative z-8 h-[240px] sm:h-[320px] w-auto object-cover object-top drop-shadow-[0_8px_32px_rgba(0,0,0,0.7)]"
         />
       </div>
 
-      {/* Info */}
-      <div ref={infoRef} className="opacity-0 flex flex-col justify-center pl-0 sm:pl-8 w-full sm:w-[65%] items-center sm:items-start">
+      {/* Info — all stacked, full width of right column */}
+      <div ref={infoRef} className="opacity-0 flex flex-col justify-center gap-3 pl-0 sm:pl-8 w-full sm:w-[65%] items-center sm:items-start">
 
+        {/* Name */}
         <h1
-          className="font-cinzel text-center text-cyan-300 tracking-[0.2em] drop-shadow-[0_0_10px_rgba(99,171,198,0.8)] font-bold"
+          className="w-full font-cinzel text-center sm:text-left text-cyan-300 tracking-[0.2em] drop-shadow-[0_0_10px_rgba(99,171,198,0.8)] font-bold"
           style={{ fontSize: "clamp(1.2rem, 3vw, 2.4rem)", lineHeight: 1.1 }}
         >
           Deepanshu Chaudhary
         </h1>
 
-        {/* Role badge */}
-        <svg viewBox="0 0 388 54" className="w-full max-w-[360px] h-auto drop-shadow-[0_0_12px_rgba(164,213,233,0.5)]" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g filter="url(#filter0_dd_132_262)" transform="scale(1,1.1)">
-            <path d="M22.978 11.575L11.6719 26.8663L22.978 41.9381H360.978L375.528 26.8663L360.978 11.575H22.978Z" fill="black" fillOpacity="0.65" shapeRendering="crispEdges"/>
-            <path d="M22.978 11.575L11.6719 26.8663L22.978 41.9381H360.978L375.528 26.8663L360.978 11.575H22.978Z" stroke="#A4D5E9" strokeWidth="0.784173" shapeRendering="crispEdges"/>
-          </g>
-          <text x="195" y="30" dominantBaseline="middle" textAnchor="middle" fill="#BEE1EE" fontFamily="'Raleway', sans-serif" fontSize="11" letterSpacing="0.5">
-            JUNIOR FULL-STACK DEVELOPER · FRONTEND-FOCUSED
-          </text>
-          <defs>
-            <filter id="filter0_dd_132_262" x="0.000648499" y="-8.39233e-05" width="387.253" height="58.5134" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-              <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-              <feOffset/><feGaussianBlur stdDeviation="5.59147"/>
-              <feComposite in2="hardAlpha" operator="out"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0.263442 0 0 0 0 0.516813 0 0 0 0 0.62023 0 0 0 0.9 0"/>
-              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_132_262"/>
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-              <feOffset/><feGaussianBlur stdDeviation="3.26731"/>
-              <feComposite in2="hardAlpha" operator="out"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0.468142 0 0 0 0 0.820632 0 0 0 0 0.964506 0 0 0 0.58 0"/>
-              <feBlend mode="normal" in2="effect1_dropShadow_132_262" result="effect2_dropShadow_132_262"/>
-              <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_132_262" result="shape"/>
-            </filter>
-          </defs>
-        </svg>
-
-        {/* Contact chips */}
-        <div className="flex flex-wrap gap-2 pl-0 sm:pl-8 justify-center sm:justify-start">
-          <ContactChip icon={<LocationIcon />}>Lucknow, Uttar Pradesh, India</ContactChip>
-          <a href="https://github.com/" target="_blank" rel="noreferrer">
-            <ContactChip icon={<GitHubIcon />}>GitHub</ContactChip>
-          </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
-            <ContactChip icon={<LinkedInIcon />}>LinkedIn</ContactChip>
-          </a>
+        {/* Role badge — 80% width */}
+        <div className="w-[80%] relative">
+          <svg viewBox="0 0 388 54" className="w-full h-auto drop-shadow-[0_0_12px_rgba(164,213,233,0.5)]" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#rh_filter)" transform="scale(1,1.1)">
+              <path d="M22.978 11.575L11.6719 26.8663L22.978 41.9381H360.978L375.528 26.8663L360.978 11.575H22.978Z" fill="black" fillOpacity="0.65" shapeRendering="crispEdges"/>
+              <path d="M22.978 11.575L11.6719 26.8663L22.978 41.9381H360.978L375.528 26.8663L360.978 11.575H22.978Z" stroke="#A4D5E9" strokeWidth="0.784173" shapeRendering="crispEdges"/>
+            </g>
+            <text x="195" y="30" dominantBaseline="middle" textAnchor="middle" fill="#BEE1EE" fontFamily="'Raleway', sans-serif" fontSize="11" letterSpacing="0.5">
+              JUNIOR FULL-STACK DEVELOPER · FRONTEND-FOCUSED
+            </text>
+            <defs>
+              <filter id="rh_filter" x="0" y="-8.39233e-05" width="387.253" height="58.5134" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset/><feGaussianBlur stdDeviation="5.59147"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0.263442 0 0 0 0 0.516813 0 0 0 0 0.62023 0 0 0 0.9 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset/><feGaussianBlur stdDeviation="3.26731"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0.468142 0 0 0 0 0.820632 0 0 0 0 0.964506 0 0 0 0.58 0"/>
+                <feBlend mode="normal" in2="effect1" result="effect2"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect2" result="shape"/>
+              </filter>
+            </defs>
+          </svg>
         </div>
 
-        <div className="flex flex-wrap gap-2 pl-0 sm:pl-8 justify-center sm:justify-start">
+        {/* Contact chips + download — all in one flow */}
+        <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+          <a href="/DeepanshuResume.pdf" download="DeepanshuResume.pdf">
+            <ContactChip icon={<DownloadIcon />}>Download Résumé</ContactChip>
+          </a>
+          <ContactChip icon={<LocationIcon />}>Lucknow, Uttar Pradesh, India</ContactChip>
+          <a href="https://github.com/Threcia-01" target="_blank" rel="noreferrer">
+            <ContactChip icon={<GitHubIcon />}>GitHub</ContactChip>
+          </a>
+          <a href="https://www.linkedin.com/in/deepanshu-chaudhary-a1b7012a7/" target="_blank" rel="noreferrer">
+            <ContactChip icon={<LinkedInIcon />}>LinkedIn</ContactChip>
+          </a>
           <ContactChip icon={<EmailIcon />}>deepchaudhary29924@gmail.com</ContactChip>
           <ContactChip icon={<PhoneIcon />}>+91-7651882669</ContactChip>
         </div>
@@ -88,13 +91,18 @@ export default function ResumeHero() {
 
 function ContactChip({ icon, children }) {
   return (
-    <span className="mt-2 inline-flex items-center gap-[8px] sm:gap-[10px] border border-[rgba(74,111,165,0.45)] px-[8px] sm:px-[10px] py-[3px] font-rokkitt text-sm sm:text-base text-[#A4D5E9] bg-black/65 tracking-[0.04em] sm:tracking-[0.06em] cursor-default transition-[border-color] duration-200 hover:border-[rgba(200,169,110,0.6)]">
+    <span className="inline-flex items-center gap-[8px] sm:gap-[10px] border border-[rgba(74,111,165,0.45)] px-[8px] sm:px-[10px] py-[3px] font-rokkitt text-sm sm:text-base text-[#A4D5E9] bg-black/65 tracking-[0.04em] sm:tracking-[0.06em] cursor-default transition-[border-color] duration-200 hover:border-[rgba(200,169,110,0.6)]">
       <span className="text-[#c8a96e]">{icon}</span>
       {children}
     </span>
   )
 }
 
+const DownloadIcon = () => (
+  <svg width="11" height="11" fill="#A4D5E9" viewBox="0 0 20 20">
+    <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd"/>
+  </svg>
+)
 const LocationIcon = () => (
   <svg width="11" height="11" fill="white" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
 )

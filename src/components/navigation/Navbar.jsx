@@ -4,10 +4,10 @@ import { FaGithub, FaLinkedin } from "react-icons/fa"
 const NAV_LINKS = [
   { label: "Home",       href: "#hero" },
   { label: "Origins",    href: "#origins" },
-  { label: "Skills",     href: "#skills" },
-  { label: "Projects",   href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact me", href: "#resume" },
+  { label: "Dungeon Cleared",     href: "#skills" },
+  { label: "Inventory",   href: "#projects" },
+  { label: "Rank & Trials", href: "#experience" },
+  { label: "Resume", href: "#resume" },
 ]
 
 export default function Navbar() {
@@ -112,10 +112,10 @@ export default function Navbar() {
             </button>
           ))}
           <div className="flex items-center gap-3 pt-3 border-t border-white/10 mt-1">
-            <a href="https://github.com/" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-white">
+            <a href="https://github.com/Threcia-01" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-white">
               <FaGithub size={18} />
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-white">
+            <a href="https://www.linkedin.com/in/deepanshu-chaudhary-a1b7012a7/" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-white">
               <FaLinkedin size={18} />
             </a>
             <button onClick={handleResume} className="ml-auto px-3 py-1 border border-cyan-400/40 text-cyan-300 font-rokkitt text-xs tracking-widest">
