@@ -17,7 +17,7 @@ export const projects = [
     {
     id: 2,
     logo: awsLogo,
-    title: "AWS Code Optimization ",
+    title: "Code Optimization ",
     subtitle: "Automation Project",
     tech: [" AWS Lambda", "Python", "Cloud Watch"],
     size: "large"
