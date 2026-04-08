@@ -1,5 +1,5 @@
 import TodoLogo from "../assets/images/TodoLogo.jpg"
-import vidtubeLogo from "../assets/images/VidtubeLogo.png"
+import vidtubeLogo from "../assets/images/VidtubeLogo.webp"
 import awsLogo from "../assets/images/aws_logo.jpg"
 import utkarshLogo from "../assets/images/utkarsh_logo.webp"
 

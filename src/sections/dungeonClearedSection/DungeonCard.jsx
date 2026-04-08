@@ -1,4 +1,4 @@
-import IslandImage from "../../assets/images/dungeonClearedIsland.png"
+import IslandImage from "../../assets/images/dungeonClearedIsland.webp"
 
 export default function DungeonCard({ logo, title, subtitle, tech = [], onClick }) {
   return (

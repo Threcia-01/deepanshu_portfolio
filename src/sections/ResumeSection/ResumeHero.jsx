@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react"
-import selfImage from "../../assets/images/selfImage.png"
+import selfImage from "../../assets/images/selfImage.webp"
 import { animateSlideLeft, animateSlideRight } from "../../components/animations/ScrollAnimations"
 
 export default function ResumeHero() {
