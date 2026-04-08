@@ -1,6 +1,6 @@
 import { useIntroPage } from "./useIntroPage"
 import { useEffect, useRef, useState } from "react"
-import introBg from "../assets/images/introPageBg.jpg"
+import introBg from "../assets/images/introPageBg.webp"
 import startBtn from "../assets/images/startButtonIntroPage.png"
 
 // The start button's position as % of the actual image dimensions

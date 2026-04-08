@@ -5,7 +5,7 @@ import BottomLeftCorner  from "../../components/containerCorners/bottomLeftCorne
 import BottomRightCorner from "../../components/containerCorners/bottomRightCorner";
 import ResumeHero   from "./ResumeHero";
 import ResumeBottom from "./ResumeBottom";
-import resumeBg from "../../assets/images/dungeonsSectionBg.png";
+import resumeBg from "../../assets/images/dungeonsSectionBg.webp";
 
 export default function ResumeSection({ className }) {
   return (

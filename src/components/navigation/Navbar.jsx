@@ -4,8 +4,8 @@ import { FaGithub, FaLinkedin } from "react-icons/fa"
 const NAV_LINKS = [
   { label: "Home",       href: "#hero" },
   { label: "Origins",    href: "#origins" },
-  { label: "Dungeon Cleared",     href: "#skills" },
-  { label: "Inventory",   href: "#projects" },
+  { label: "Dungeon Cleared",     href: "#projects" },
+  { label: "Inventory",   href: "#skills" },
   { label: "Rank & Trials", href: "#experience" },
   { label: "Resume", href: "#resume" },
 ]
